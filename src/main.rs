@@ -19,6 +19,8 @@ fn store_clipboard_contents(clipboard: &mut Clipboard, clipboard_history: &mut V
         Ok(item) => clipboard_history.insert(0, ClipboardItem::new(item)),
         Err(err) => println!("Error getting copied item {err}"),
     }
+
+    if clipboard_history.len() > 4 { clipboard_history.pop(); }
 }
 
 fn set_clipboard(clipboard: &mut Clipboard, clipboard_history: &mut Vec<ClipboardItem>, index: usize) {
@@ -37,7 +39,6 @@ fn listen_for_keypress() {
         process::exit(1)
     });
     
-
     let mut clipboard_history: Vec<ClipboardItem> = Vec::new();
     let mut previous_press_is_cmd: bool = false;
     let mut previous_press_is_ctrl: bool = false;
