@@ -36,3 +36,9 @@ Contributions are welcome! If you have ideas for improvements, bug fixes, or new
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+### TODO
+
+- [ ] Images.
+- [ ] Add to context menu.
+- [ ] Add from context menu click.
