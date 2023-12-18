@@ -1,5 +1,4 @@
 use arboard::Clipboard;
-use std::process;
 use std::thread;
 use std::time;
 
